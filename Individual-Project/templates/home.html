@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <meta charset="UTF-8">
     <title>Home Page</title>
 </head>
 <body>
+<div class="lola">
+
+<img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo">
+
+<div class="navbar">
+    <ul>
+<li> <a href="/aboutus">About Us</a> </li>
+<li> <a href="/all">All Lessons</a> </li>
+<li> <a href="/signout">Sign out</a> </li>
+    </ul>
+</div>
 
 <h2> Welcome {{name}}</h2>
 <h1> hello </h1>
-<a href="/aboutus"><button>About Us</button></a>
-<a href="/all"><button>All Lessons</button></a>
-<a href="/signout"><button>Sign out</button></a>
 
 <div> 
 <h2> Credits: </h2>
@@ -35,6 +44,8 @@
 
 <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EAQzwC-Bb_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 </div>
 
 </body>
