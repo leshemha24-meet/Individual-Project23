@@ -6,9 +6,36 @@
 </head>
 <body>
 
-<h2> Welcome </h2>
+<h2> Welcome {{name}}</h2>
 <h1> hello </h1>
 <a href="/aboutus"><button>About Us</button></a>
+<a href="/all"><button>All Lessons</button></a>
+<a href="/signout"><button>Sign out</button></a>
+
+<div> 
+<h2> Credits: </h2>
+<p> YouTube:  </p>
+</div>
+
+<div> 
+<h2> Information: </h2>
+<p> blah blah </p>
+</div>
+
+<form method="post" action="/home">
+
+        <div>
+            <h3> Give us feedback! </h3>
+            <div>
+                <input type="text"  name="feedback" id="feedback"  maxlength="300">
+            </div>
+            <input type="submit"/>
+        </div>
+</form>
+
+<div> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EAQzwC-Bb_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </body>
 </html>

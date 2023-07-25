@@ -35,7 +35,7 @@ def signup():
         try:
             login_session['user']=auth.create_user_with_email_and_password(email, password)
             UID = login_session['user']['localId']
-            user = {'email':email, 'fullname':fullname, 'username':username}
+            user = {'email':email, 'fullname':name, 'username':username}
             db.child('Users').child(UID).set(user)
             return redirect(url_for('home'))
         except:
@@ -58,11 +58,37 @@ def login():
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    name=''
+    if 'user' in login_session:
+        user=login_session['user']
+        if user != None:
+            try:
+                uid=user['localId']
+                name=db.child('Users').child(uid).get().val()['username'] 
+            except:
+                pass   
+    if name=='':
+        return redirect(url_for('index'))
+    if request.method=='GET':
+        return render_template('home.html', name=name) 
+    else:
+        feedback=request.form['feedback']
+        db.child('Feedbacks').push(feedback)  
+    return render_template('home.html', name=name)
 
 @app.route('/aboutus', methods=['GET', 'POST'])
 def aboutus():
     return render_template('aboutus.html')
+
+@app.route('/all', methods=['GET', 'POST'])
+def all():
+    return render_template('all.html')
+
+@app.route('/signout')
+def signout():
+    login_session['User']=None
+    auth.current_user= None
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
