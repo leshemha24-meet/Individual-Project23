@@ -25,6 +25,10 @@ db = firebase.database()
 def index():
     return render_template('index.html')
 
+def get_checked_items(user_uid):
+    user_data=db.child('Users').child(user_uid).get()
+    return user_data.val() or {}
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
@@ -82,7 +86,26 @@ def aboutus():
 
 @app.route('/all', methods=['GET', 'POST'])
 def all():
-    return render_template('all.html')
+    checked_items = {}
+    if 'user' in login_session:
+        user_uid=login_session['user']['localId']
+        checked_items=get_checked_items(user_uid)
+    else:
+        checked_items={}
+    if request.method == 'POST':
+        checkbox1=request.form.get('checkbox1')
+        checkbox2=request.form.get('checkbox2')
+        checkbox3=request.form.get('checkbox3')
+        checkbox4=request.form.get('checkbox4')
+        if user_uid:
+            user_checklist = {'checkbox1':checkbox1, 'checkbox2':checkbox2, 'checkbox3':checkbox3, 'checkbox4':checkbox4}
+        # done=request.form.get('checkbox')
+        # print(done)
+        db.child('Users').child(user_uid).child('myvids').set(user_checklist)
+        return redirect(url_for('all'))
+    else:
+        return render_template("all.html", checked_items=checked_items)
+
 
 @app.route('/signout')
 def signout():

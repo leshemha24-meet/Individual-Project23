@@ -7,57 +7,68 @@
 </head>
 <body>
 
-<a href="/aboutus"><button>About Us</button></a>
-<a href="/home"><button>Go Back Home</button></a>
-<a href="/signout"><button>Sign out</button></a>
+<div class="banner">
 
-<div>
-    <label> Lesson 1 </label>
-    <div>
-    <form> 
-        <input type="radio" name="done" value="cats">Done
-    </form>
-    </div>
+<img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo">
+
+<div class="navbar">
+    <ul>
+<li><a href="/home" class="active">Go Back Home</a></li>
+<li><a href="/aboutus" class="active">About Us</a></li>
+<li><a href="/signout" class="active">Sign out</a></li>
+    </ul>
+</div>
+
+<div class="done1">
+    <label style="color:white;"> Lesson 1 </label>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G8ElT-63o3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-</div>
-
-<div>
-    <label> Lesson 2 </label>
     <div>
-    <form> 
-        <input type="radio" name="done" value="cats">Done
+    <form method="post" action="/all"> 
+        <input type="checkbox1" name="checkbox" value="done" {%if checked_items.checkbox1%} checked {%endif%}>
+        <button type="submit"><span></span> I'm done </button>
     </form>
     </div>
+</div>
+
+<div class="done2">
+    <label> Lesson 2 </label>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/954xC5JrTrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-
-<div>
-    <label> Lesson 3 </label>
     <div>
-    <form> 
-        <input type="radio" name="done" value="cats">Done
+    <form method="post" action="/all"> 
+        <input type="checkbox2" name="checkbox" value="done" {%if checked_items.checkbox2%} checked {%endif%}>
+        <button type="submit"><span></span> I'm done </button>
     </form>
     </div>
+</div>
+
+<div class="done3">
+    <label> Lesson 3 </label>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T3dgN08l88c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    <form method="post" action="/all"> 
+        <input type="checkbox" name="checkbox3" value="done" {%if checked_items[checkbox3] == "done" %} checked {%endif%}>
+        <button type="submit"><span></span> I'm done </button>
+    </form>
 </div>
 
-<div>
+<div class="done4">
     <label> Lesson 4 </label>
-    <div>
-    <form> 
-        <input type="radio" name="done" value="cats">Done
-    </form>
-    </div>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fsfe719mzXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    <div>
+    <form method="post" action="/all"> 
+        <input type="checkbox" name="checkbox4" value="done" {%if checked_items.checkbox4%} checked {%endif%}>
+        <button type="submit"><span></span> I'm done </button>
+    </form>
+    </div>
 </div>
 
-
+</div>
 </body>
 </html>

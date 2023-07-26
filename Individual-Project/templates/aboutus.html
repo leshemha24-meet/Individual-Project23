@@ -6,17 +6,33 @@
     <title>About Us</title>
 </head>
 <body>
-<div class='navbar'>
-<a href="/home" class="active"><button>Go Back Home</button></a>
-<a href="/all" class="active"><button>All Lessons</button></a>
-<a href="/signout" class="active"><button>Sign out</button></a>
+<div class="banner">
+
+<img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo">
+
+<div class="navbar">
+    <ul>
+<li><a href="/home" class="active">Go Back Home</a></li>
+<li><a href="/all" class="active">All Lessons</a></li>
+<li><a href="/signout" class="active">Sign out</a></li>
+    </ul>
 </div>
 
+<div class="meow">
 <h1> About Us </h1>
 <p> Hello and welcome to VFY- Violin For You.
     <br>
 Our website was established on July 2023, with an intention of encouraging young people to learn the beautiful instrument, the violin.
     <br>
 Our amazing crew:</p>
+</div>
+
+<div class="crew">
+    <img src="{{ url_for('static', filename='imgs/violin.png') }}" id="vi">
+    <img src="{{ url_for('static', filename='imgs/sheets.png') }}" id="she">
+    <img src="{{ url_for('static', filename='imgs/developer.png') }}" id="dev">
+</div>
+
+</div>
 </body>
 </html>

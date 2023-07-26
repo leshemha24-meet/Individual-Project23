@@ -6,7 +6,7 @@
     <title>Home Page</title>
 </head>
 <body>
-<div class="lola">
+<div class="banner">
 
 <img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo">
 
@@ -18,34 +18,40 @@
     </ul>
 </div>
 
-<h2> Welcome {{name}}</h2>
-<h1> hello </h1>
-
-<div> 
-<h2> Credits: </h2>
-<p> YouTube:  </p>
+<div class="woof">
+<h1> Welcome {{name}}</h1>
 </div>
 
-<div> 
-<h2> Information: </h2>
-<p> blah blah </p>
-</div>
-
-<form method="post" action="/home">
-
-        <div>
-            <h3> Give us feedback! </h3>
-            <div>
-                <input type="text"  name="feedback" id="feedback"  maxlength="300">
-            </div>
-            <input type="submit"/>
-        </div>
-</form>
+<div class="puke">
 
 <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EAQzwC-Bb_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
+<div class="sun"> 
+<h2> Information:</h2>
+<p> ViolinForYou is anon-profit website which promotes a young violinist community. </p>
+</div>
+
+<div class="rain"> 
+<h2> Credits: </h2>
+<a href="https://www.youtube.com"><p> YouTube </p></a>
+<a href="https://www.pinterest.com/"><p> Pinterest </p></a>
+<a href="https://www.google.com/"><p> Google </p></a>
+</div>
+
+<form method="post" action="/home">
+
+        <div>
+            <h2 id="yoho"> Give us feedback! </h2>
+            <div class="ouch">
+                <input type="text"  name="feedback" id="feedback"  placeholder="Type here!" style="color:white;" maxlength="300">
+            </div>
+            <button type="submit"><span></span> Submit </button>
+        </div>
+</form>
+
+</div>
 </div>
 
 </body>

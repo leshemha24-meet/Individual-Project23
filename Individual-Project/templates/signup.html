@@ -9,50 +9,43 @@
 
 <div class="banner">
     <form method="post" action="/signup">
+    
+    <button id='signup' hidden></button>
 
-<button id='signup' hidden></button>
-
-    <div class="yay">
-        <h2>
+    <div class="sign-up">
+        <h1>
             Create an account
-        </h2>
-
-        <h4 >
-            Please fill up your information below to sign up.
-        </h4>
+        </h1>
         
-        <div>
-            <label>Full Name*</label>
-            <div>
-                <input type="text"  name="fullname" id="fullname" required>
+            <div class="input-field">
+                <i class="fa-user"></i>
+                <input type="text"  name="fullname" id="fullname" placeholder="*Fullname" required>
             </div>
-        </div>
+
+            <div class="input-field">
+                <i class="fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="*Username" required>
+            </div>
+
+            <div class="input-field">
+                <i class="fa-user"></i>
+                <input type="email"  name="email" id="email" placeholder="*Email" required>
+            </div>
+
+            <div class="input-field">
+                <i class="fa-user"></i>
+                <input type="password"  name="password" minlength="6" placeholder="*Password" required>
+            </div>
 
         <div>
-            <label>Username*</label>
-            <div>
-                <input type="text" name="username" id="username" required>
-            </div>
+            <button type="submit"><span></span> Signup </button>
         </div>
-
-        <div>
-            <label>Email address*</label>
-            <div>
-                <input type="email"  name="email" id="emailStr" required>
-            </div>
-        </div>
-
-        <div>
-            <label>Password*</label>
-            <div class="input-group">
-                <input type="password"  name="password" minlength="6">
-            </div>
-        </div>
-
-        <div>
-            <button type="submit"> Signup </button>
-        </div>
+        <a href="/">Go Back!</a> 
     </form>
+</div>
+
+<div class="banner">
+<img src="{{ url_for('static', filename='imgs/logo.png') }}" class="logo">
 </div>
 
 </body>

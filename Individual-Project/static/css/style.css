@@ -4,20 +4,11 @@
   font-family: sans-serif;
 }
 
-.banner{
-  width: 100;
-  height: 100vh;
+body{
   background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url("/static/imgs/background.jpg");
-  background-size: cover;
   background-position: center;
-}
-
-.lola{
-  width: 100;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url("/static/imgs/background.jpg");
-  background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .navbar{
@@ -84,40 +75,36 @@
   font-weight: bold;
 }
 
-.yay {
+.meow{
   width: 100%;
   position: absolute;
-  top: 25%;
-  transform: translateY(-50%);
+  top: 40%;
+  transform: translateY(-100%);
   text-align: center;
   color: #fff;
 }
 
-.form-center{
-  display:flex;
-  justify-content: center;
-  width: 400px;
-  margin: 0 auto;
-  position: relative;
-  width:100%;
-  height:10em;
-}
-
-.form-center form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-
-.yay h2{
-  font-size: 60px;
+.meow h1{
+  font-size: 80px;
+  margin-top: 50px;
   font-weight: bold;
-  text-transform: uppercase;
 }
-.yay h4{
 
+.meow p{
+  font-size: 30px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.crew{
+  background: #dfbf9f;
+  bottom:5%;
+  position: absolute;
+/*  width: 100px; */
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
 }
 
 button{
@@ -153,6 +140,195 @@ button:hover span{
 
 button:hover{
   border: none;
+}
+
+.sign-up{
+  width: 20%;
+  max-width: : 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #dfbf9f;
+  padding: 50px 60px 70px;
+  text-align: center;
+}
+
+.sign-up h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #a77e55;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.sign-up a{
+  text-decoration: none;
+  color: #836344;
+}
+
+.sign-up h1::after{
+  content: '';
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #a77e55;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.log-in{
+  width: 20%;
+  max-width: : 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #dfbf9f;
+  padding: 50px 60px 70px;
+  text-align: center;
+}
+
+.log-in h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #a77e55;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.log-in a{
+  text-decoration: none;
+  color: #836344;
+}
+
+.log-in h1::after{
+  content: '';
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #a77e55;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.input-field{
+  background: #eaeaea;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+input{
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+}
+
+.input-field i{
+  margin-left: 15px;
+  color: #999;
+}
+
+.puke{
+  width: 32%;
+  max-width: : 450px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #dfbf9f;
+  padding: 50px 60px 70px;
+  text-align: center;
+  justify-content: center;
+  color: #a77e55;
+}
+
+.woof{
+  font-size: 25px;
+  position: fixed;
+  left: 620px;
+  text-transform: uppercase;
+  color: #fff;
+  top: 1.25em;
+}
+
+.rain{
+  margin:10px;
+}
+.rain h2{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.rain a{
+  text-decoration: none;
+  color: #836344;
+  font-size: 20px;
+}
+
+.sun h2{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.sun p{
+  font-size: 20px;
+  color: #836344;
+}
+
+.ouch{
+  background: #a77e55;
+  opacity: 0.5;
+  color: #fff;
+}
+
+.ouch::input-field{
+  color: #fff;
+}
+
+#yoho{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.done1{
+  width: 575px;
+  background: #dfbf9f;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding:30px;
+}
+
+.done2{
+  width: 575px;
+  background: #dfbf9f;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding:30px;
+}
+
+.done3{
+  width: 575px;
+  background: #dfbf9f;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding:30px;
+}
+
+.done4{
+  width: 575px;
+  background: #dfbf9f;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding:30px;
 }
 
 
