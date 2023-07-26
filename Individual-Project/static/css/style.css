@@ -76,12 +76,14 @@ body{
 }
 
 .meow{
+  background: #dfbf9f;
   width: 100%;
   position: absolute;
   top: 40%;
-  transform: translateY(-100%);
+  transform: translateY(-60%);
   text-align: center;
   color: #fff;
+  height: 320px;
 }
 
 .meow h1{
@@ -97,13 +99,13 @@ body{
 }
 
 .crew{
-  background: #dfbf9f;
-  bottom:5%;
+  background-size: 100%;
   position: absolute;
-/*  width: 100px; */
+  transform: translateY(110%);
+/*  width: 100%; */
   cursor: pointer;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0px;
   padding: 3px;
 }
 
@@ -266,6 +268,7 @@ input{
 .rain h2{
   font-size: 30px;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .rain a{
@@ -277,16 +280,18 @@ input{
 .sun h2{
   font-size: 30px;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .sun p{
   font-size: 20px;
   color: #836344;
+  margin-bottom: 10px;
 }
 
 .ouch{
-  background: #a77e55;
-  opacity: 0.5;
+  background: #eaeaea;
+/*  opacity: 0.5;*/
   color: #fff;
 }
 
@@ -297,38 +302,73 @@ input{
 #yoho{
   font-size: 30px;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#yo{
+  font-size: 60px;
+  position: fixed;
+  left: 620px;
+  text-transform: uppercase;
+  color: #fff;
+  top: 1.25em;
+  display: inline;
+  position: absolute;
 }
 
 .done1{
-  width: 575px;
+  width: 558px;
   background: #dfbf9f;
+  margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   padding:30px;
+}
+
+.done1 label{
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .done2{
-  width: 575px;
+  width: 558px;
+  float: center;
   background: #dfbf9f;
+  margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   padding:30px;
+}
+
+.done2 label{
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .done3{
-  width: 575px;
+  width: 558px;
   background: #dfbf9f;
+  margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   padding:30px;
+}
+
+.done3 label{
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .done4{
-  width: 575px;
+  width: 558px;
   background: #dfbf9f;
+  margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   padding:30px;
 }
 
-
+.done4 label{
+  font-size: 18px;
+  text-transform: uppercase;
+}

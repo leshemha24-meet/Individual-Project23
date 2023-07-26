@@ -4,6 +4,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <meta charset="UTF-8">
     <title>All Lessons</title>
+    <style>
+        input[type=checkbox] { 
+        position: relative;
+        top:60px;
+        left: 230px;
+        width: 20px;
+        height: 20px;
+         }
+
+        button{
+            display: block;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -19,6 +33,10 @@
     </ul>
 </div>
 
+<div>
+<h1 id="yo"> Lessons Library! </h1>
+</div>
+
 <div class="done1">
     <label style="color:white;"> Lesson 1 </label>
     <div> 
@@ -26,44 +44,44 @@
     </div>
     <div>
     <form method="post" action="/all"> 
-        <input type="checkbox1" name="checkbox" value="done" {%if checked_items.checkbox1%} checked {%endif%}>
+        <input type="checkbox" name="checkbox1" value="done" autocomplete="off" {%if checked_items[checkbox1] == "done" %} checked {%endif%}>
         <button type="submit"><span></span> I'm done </button>
     </form>
     </div>
 </div>
 
 <div class="done2">
-    <label> Lesson 2 </label>
+    <label style="color:white;"> Lesson 2 </label>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/954xC5JrTrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div>
     <form method="post" action="/all"> 
-        <input type="checkbox2" name="checkbox" value="done" {%if checked_items.checkbox2%} checked {%endif%}>
+        <input type="checkbox" name="checkbox2" value="done" autocomplete="off" {%if checked_items[checkbox2] == "done" %} checked {%endif%}>
         <button type="submit"><span></span> I'm done </button>
     </form>
     </div>
 </div>
 
 <div class="done3">
-    <label> Lesson 3 </label>
+    <label style="color:white;"> Lesson 3 </label>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T3dgN08l88c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <form method="post" action="/all"> 
-        <input type="checkbox" name="checkbox3" value="done" {%if checked_items[checkbox3] == "done" %} checked {%endif%}>
+        <input type="checkbox" name="checkbox3" value="done" autocomplete="off" {%if checked_items[checkbox3] == "done" %} checked {%endif%}>
         <button type="submit"><span></span> I'm done </button>
     </form>
 </div>
 
 <div class="done4">
-    <label> Lesson 4 </label>
+    <label style="color:white;"> Lesson 4 </label>
     <div> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fsfe719mzXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div>
     <form method="post" action="/all"> 
-        <input type="checkbox" name="checkbox4" value="done" {%if checked_items.checkbox4%} checked {%endif%}>
+        <input type="checkbox" name="checkbox4" value="done" autocomplete="off" {%if checked_items[checkbox4] == "done" %} checked {%endif%}>
         <button type="submit"><span></span> I'm done </button>
     </form>
     </div>
